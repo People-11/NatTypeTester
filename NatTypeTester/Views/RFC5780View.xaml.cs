@@ -57,8 +57,10 @@ namespace NatTypeTester.Views
 
 				this.BindCommand(ViewModel, vm => vm.DiscoveryNatType, v => v.DiscoveryButton).DisposeWith(d);
 
-				this.Events()
-						.KeyDown
+				Observable.FromEventPattern<KeyEventHandler, KeyEventArgs>(
+								h => this.KeyDown += h,
+								h => this.KeyDown -= h)
+						.Select(x => x.EventArgs)
 						.Where(x => x.Key == Key.Enter && DiscoveryButton.Command.CanExecute(default))
 						.Subscribe(_ => DiscoveryButton.Command.Execute(default))
 						.DisposeWith(d);

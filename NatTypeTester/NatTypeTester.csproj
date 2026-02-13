@@ -13,6 +13,9 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -25,7 +28,6 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
     <PackageReference Include="ModernWpfUI" Version="0.9.3" />
-    <PackageReference Include="ReactiveUI.Events.WPF" Version="13.0.38" />
     <PackageReference Include="ReactiveUI.WPF" Version="13.0.38" />
     <PackageReference Include="Splat.Microsoft.Extensions.DependencyInjection" Version="9.8.1" />
   </ItemGroup>
