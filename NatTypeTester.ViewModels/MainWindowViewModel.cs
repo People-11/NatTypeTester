@@ -19,11 +19,16 @@ namespace NatTypeTester.ViewModels
 
 		private readonly IEnumerable<string> _defaultServers = new HashSet<string>
 		{
-				@"stun.syncthing.net",
-				@"stun.qq.com",
-				@"stun.miwifi.com",
-				@"stun.bige0.com",
-				@"stun.stunprotocol.org"
+				@"stun.hot-chilli.net",
+				@"stun.fitauto.ru",
+				@"stun.internetcalls.com",
+				@"stun.voip.aebc.com",
+				@"stun.mixvoip.com",
+				@"stun.uls.co.za",
+				@"stun.epygi.com",
+				@"stun.voipgate.com",
+				@"stun.voipbuster.com",
+				@"stun.voipstunt.com"
 		};
 
 		private SourceList<string> List { get; } = new();
